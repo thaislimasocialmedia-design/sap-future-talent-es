@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAP Future Talent 2026 | Bootcamp SAP Business Data Cloud</title>
+  <meta name="description" content="Bootcamp gratuito SAP Future Talent 2026: domina el SAP Business Data Cloud (BDC) con sesiones practicas en vivo. Inscribete ahora.">
+  <meta property="og:title" content="SAP Future Talent 2026 | Bootcamp SAP BDC">
+  <meta property="og:description" content="4 sesiones en vivo y gratuitas sobre SAP Business Data Cloud. Aprende datos, IA y analytics en la practica.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'sap-blue': '#0070F2',
+            'sap-dark': '#1B2B4B',
+            'sap-violet': '#6B3FA0',
+            'sap-purple': '#8B5CF6',
+            'sap-magenta': '#D946EF',
+            'sap-lilac': '#C4B5FD',
+            'sap-blue-violet': '#4F46E5',
+            'violet-wash': '#F3F0FF',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-gradient {
+      background: linear-gradient(150deg, #0a0f1a 0%, #121d33 15%, #1B2B4B 30%, #2a1a5e 55%, #3b2d7a 75%, #4F46E5 100%);
+    }
+    .hero-pattern {
+      background-image:
+        radial-gradient(ellipse at 70% 30%, rgba(79,70,229,0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 30% 70%, rgba(107,63,160,0.1) 0%, transparent 50%);
+    }
+    .crystal {
+      position: absolute;
+      border-radius: 20%;
+      background: linear-gradient(135deg, rgba(139,92,246,0.06), rgba(79,70,229,0.04));
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(107,63,160,0.15);
+    }
+    .btn-glow {
+      box-shadow: 0 4px 20px rgba(0,112,242,0.4);
+      transition: all 0.3s ease;
+    }
+    .btn-glow:hover {
+      box-shadow: 0 6px 30px rgba(0,112,242,0.6);
+      transform: translateY(-2px);
+    }
+    .session-line::before {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 48px;
+      bottom: -24px;
+      width: 2px;
+      background: linear-gradient(180deg, #8B5CF6, #C4B5FD);
+    }
+    .session-item:last-child .session-line::before {
+      display: none;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(3deg); }
+    }
+    .float-1 { animation: float 8s ease-in-out infinite; }
+    .float-2 { animation: float 10s ease-in-out infinite 1s; }
+    .float-3 { animation: float 12s ease-in-out infinite 2s; }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationEvent",
+    "name": "SAP Future Talent 2026 - Bootcamp SAP Business Data Cloud",
+    "description": "Bootcamp gratuito con 4 sesiones en vivo sobre SAP Business Data Cloud (BDC): datos, IA, analytics y gobernanza en la practica.",
+    "startDate": "2026-06-16T18:00:00-03:00",
+    "endDate": "2026-06-25T21:00:00-03:00",
+    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "https://zoom.us"
+    },
+    "organizer": [
+      { "@type": "Organization", "name": "SAP", "url": "https://www.sap.com" },
+      { "@type": "Organization", "name": "Lab2learn", "url": "https://lab2learn.com.br" }
+    ],
+    "isAccessibleForFree": true,
+    "inLanguage": "es",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+</head>
+<body class="bg-white font-sans text-gray-800 antialiased">
+
+  <!-- HEADER -->
+  <header class="bg-[#0a0f1a]/95 backdrop-blur-md fixed top-0 w-full z-50 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 sm:h-10 w-auto">
+          <path fill="#FFFFFF" d="M24 6H0v12h12.13L24 6zm-13.986 8.683c-.37.123-.787.191-1.23.191-.456 0-.885-.072-1.263-.202l-.358.928-2 .006.09-.467c-.029.025-.057.051-.087.075-.535.435-1.208.636-2.037.651l-.213.002h-.052c-.921 0-1.784-.25-2.53-.683l.729-1.463c.79.472 1.286.578 1.956.564.347-.007.598-.071.761-.242a.565.565 0 0 0 .156-.372v-.001c.007-.38-.53-.559-1.185-.764-.531-.166-1.135-.393-1.606-.743-.559-.414-.825-.934-.812-1.668.005-.541.22-1.032.567-1.391.519-.543 1.357-.872 2.363-.872h.006c.863.001 1.915.248 2.676.64l-.82 1.445c-.835-.408-1.255-.447-1.73-.472-.708-.038-1.064.217-1.069.493-.007.336.669.64 1.305.847.964.309 2.19.723 2.377 1.92L7.77 8.399h2.046l2.064 5.636-.007-5.635h2.37c2.257 0 3.318.772 3.318 2.546 0 1.592-1.09 2.541-2.936 2.541h-.763l-.01 2.117-3.588-.004-.25-.917z"></path>
+          <path fill="#FFFFFF" d="M15.63 10.87c0-.717-.554-.95-1.248-.95h-.521v1.925h.521c.694-.001 1.247-.233 1.248-.975zm-6.856-.175-.748 2.387a2.22 2.22 0 0 0 1.499.007l-.736-2.395-.015.001z"></path>
+        </svg>
+        <div class="hidden sm:block h-6 w-px bg-white/20"></div>
+        <span class="hidden sm:block text-white/80 text-sm font-medium tracking-wide">Future Talent 2026</span>
+      </div>
+      <a href="https://us06web.zoom.us/webinar/register/WN_lBnpZuo2Ruex97jN0M5-gg" target="_blank" rel="noopener" class="bg-sap-blue hover:bg-blue-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors">
+        Inscribirse
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28 min-h-[90vh] flex items-center" style="background: linear-gradient(150deg, #070b14 0%, #0e1726 20%, #1B2B4B 40%, #231550 65%, #2d1a6b 85%, #352080 100%)">
+    <div class="crystal w-32 h-32 top-20 right-[10%] float-1 hidden lg:block" style="transform: rotate(15deg);"></div>
+    <div class="crystal w-48 h-48 bottom-10 left-[5%] float-2 hidden lg:block" style="transform: rotate(-20deg);"></div>
+    <div class="crystal w-24 h-24 top-[40%] right-[25%] float-3 hidden lg:block" style="transform: rotate(45deg);"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="max-w-3xl">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-6">
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-white/90 text-sm font-medium">Bootcamp Gratuito | Online en Vivo</span>
+        </div>
+
+        <!-- SAP Logo Large -->
+        <div class="mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-14 sm:h-20 w-auto drop-shadow-lg">
+            <path fill="#FFFFFF" d="M24 6H0v12h12.13L24 6zm-13.986 8.683c-.37.123-.787.191-1.23.191-.456 0-.885-.072-1.263-.202l-.358.928-2 .006.09-.467c-.029.025-.057.051-.087.075-.535.435-1.208.636-2.037.651l-.213.002h-.052c-.921 0-1.784-.25-2.53-.683l.729-1.463c.79.472 1.286.578 1.956.564.347-.007.598-.071.761-.242a.565.565 0 0 0 .156-.372v-.001c.007-.38-.53-.559-1.185-.764-.531-.166-1.135-.393-1.606-.743-.559-.414-.825-.934-.812-1.668.005-.541.22-1.032.567-1.391.519-.543 1.357-.872 2.363-.872h.006c.863.001 1.915.248 2.676.64l-.82 1.445c-.835-.408-1.255-.447-1.73-.472-.708-.038-1.064.217-1.069.493-.007.336.669.64 1.305.847.964.309 2.19.723 2.377 1.92L7.77 8.399h2.046l2.064 5.636-.007-5.635h2.37c2.257 0 3.318.772 3.318 2.546 0 1.592-1.09 2.541-2.936 2.541h-.763l-.01 2.117-3.588-.004-.25-.917z"></path>
+            <path fill="#FFFFFF" d="M15.63 10.87c0-.717-.554-.95-1.248-.95h-.521v1.925h.521c.694-.001 1.247-.233 1.248-.975zm-6.856-.175-.748 2.387a2.22 2.22 0 0 0 1.499.007l-.736-2.395-.015.001z"></path>
+          </svg>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+          Future Talent 2026
+        </h1>
+        <h2 class="text-xl sm:text-2xl lg:text-3xl font-light text-sap-lilac mb-6">
+          Bootcamp SAP Business Data Cloud
+        </h2>
+        <p class="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+          Domina la plataforma que esta redefiniendo datos, analytics e IA en el ecosistema SAP. 4 sesiones en vivo, 100% gratuitas, con quienes viven el mercado en la practica.
+        </p>
+
+        <!-- Info pills -->
+        <div class="flex flex-wrap gap-3 mb-10">
+          <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+            <svg class="w-5 h-5 text-sap-lilac" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span class="text-white text-sm font-medium">16, 18, 23 y 25 de junio</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+            <svg class="w-5 h-5 text-sap-lilac" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="text-white text-sm font-medium">18h (hora de Brasilia)</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/10">
+            <svg class="w-5 h-5 text-sap-lilac" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            <span class="text-white text-sm font-medium">En vivo por Zoom</span>
+          </div>
+          <div class="flex items-center gap-2 bg-green-500/20 backdrop-blur-sm rounded-lg px-4 py-2 border border-green-400/20">
+            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-green-300 text-sm font-semibold">100% Gratuito</span>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <a href="https://us06web.zoom.us/webinar/register/WN_lBnpZuo2Ruex97jN0M5-gg" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-sap-blue text-white font-bold text-lg px-8 py-4 rounded-xl btn-glow">
+          Quiero inscribirme
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+      </div>
+
+      <!-- Countdown -->
+      <div class="mt-12 sm:mt-16" x-data="countdown('2026-06-16T18:00:00-03:00')">
+        <p class="text-white/60 text-sm font-medium uppercase tracking-wider mb-3">La primera sesion comienza en</p>
+        <div class="flex gap-3 sm:gap-4">
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 sm:px-6 sm:py-4 border border-white/10 text-center min-w-[70px]">
+            <span class="text-2xl sm:text-4xl font-bold text-white block" x-text="days">00</span>
+            <span class="text-xs text-white/60 uppercase tracking-wider">dias</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 sm:px-6 sm:py-4 border border-white/10 text-center min-w-[70px]">
+            <span class="text-2xl sm:text-4xl font-bold text-white block" x-text="hours">00</span>
+            <span class="text-xs text-white/60 uppercase tracking-wider">horas</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 sm:px-6 sm:py-4 border border-white/10 text-center min-w-[70px]">
+            <span class="text-2xl sm:text-4xl font-bold text-white block" x-text="minutes">00</span>
+            <span class="text-xs text-white/60 uppercase tracking-wider">min</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 sm:px-6 sm:py-4 border border-white/10 text-center min-w-[70px]">
+            <span class="text-2xl sm:text-4xl font-bold text-white block" x-text="seconds">00</span>
+            <span class="text-xs text-white/60 uppercase tracking-wider">seg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUE ES EL BDC -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+        <span class="inline-block text-sap-purple font-semibold text-sm uppercase tracking-wider mb-3">Sobre el bootcamp</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-sap-dark mb-6">
+          ¿Que es el SAP Business Data Cloud?
+        </h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Anunciado en 2025, el SAP BDC es considerado el lanzamiento de infraestructura de datos mas significativo de SAP desde el S/4HANA. Una plataforma unificada que combina Datasphere, Analytics Cloud y contenido de negocio curado, disenada para alimentar IA empresarial.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card-hover bg-violet-wash rounded-2xl p-6 sm:p-8 border border-sap-lilac/30">
+          <div class="w-12 h-12 rounded-xl bg-sap-purple/10 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-sap-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-sap-dark mb-2">Datos Unificados</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Datasphere, SAC y HANA Cloud en una unica arquitectura gobernada. Datos SAP y no SAP con contexto de negocio.</p>
+        </div>
+        <div class="card-hover bg-violet-wash rounded-2xl p-6 sm:p-8 border border-sap-lilac/30">
+          <div class="w-12 h-12 rounded-xl bg-sap-purple/10 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-sap-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-sap-dark mb-2">IA y Knowledge Graph</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Entiende como el Knowledge Graph mapea entidades y relaciones para grounding de agentes Joule e IA empresarial.</p>
+        </div>
+        <div class="card-hover bg-violet-wash rounded-2xl p-6 sm:p-8 border border-sap-lilac/30">
+          <div class="w-12 h-12 rounded-xl bg-sap-purple/10 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-sap-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-sap-dark mb-2">Insight y Decision</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Transforma datos en decisiones de negocio. De data products a storytelling ejecutivo con impacto real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDA / SESIONES -->
+  <section class="py-16 sm:py-24 bg-gray-50" id="agenda">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+        <span class="inline-block text-sap-purple font-semibold text-sm uppercase tracking-wider mb-3">Programa completo</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-sap-dark mb-6">
+          4 sesiones que transformaran tu vision sobre datos
+        </h2>
+        <p class="text-lg text-gray-600">
+          Cada sesion con 3 horas de contenido practico, aplicado a escenarios reales de proyecto.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+        <!-- Sesion 01 -->
+        <div class="session-item relative">
+          <div class="session-line relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-sap-purple text-white flex items-center justify-center font-bold text-lg z-10">
+              01
+            </div>
+            <div class="flex-1 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+              <div class="flex flex-wrap items-center gap-3 mb-3">
+                <span class="inline-flex items-center gap-1.5 bg-sap-purple/10 text-sap-purple text-sm font-semibold px-3 py-1 rounded-full">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  16 de junio (lun)
+                </span>
+                <span class="text-gray-400 text-sm">18h (hora de Brasilia)</span>
+              </div>
+              <h3 class="text-xl font-bold text-sap-dark mb-2">Fundamentos de datos en el ecosistema SAP</h3>
+              <ul class="space-y-1.5 text-gray-600 text-sm">
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-purple mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  Evolucion: BW, Datasphere y BDC
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-purple mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  El rol de los datos en la Business AI
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-purple mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  Data fabric, semantic layer y Data Products
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sesion 02 -->
+        <div class="session-item relative">
+          <div class="session-line relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-sap-blue-violet text-white flex items-center justify-center font-bold text-lg z-10">
+              02
+            </div>
+            <div class="flex-1 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+              <div class="flex flex-wrap items-center gap-3 mb-3">
+                <span class="inline-flex items-center gap-1.5 bg-sap-blue-violet/10 text-sap-blue-violet text-sm font-semibold px-3 py-1 rounded-full">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  18 de junio (mie)
+                </span>
+                <span class="text-gray-400 text-sm">18h (hora de Brasilia)</span>
+              </div>
+              <h3 class="text-xl font-bold text-sap-dark mb-2">Estructuracion, modelado y gobernanza</h3>
+              <ul class="space-y-1.5 text-gray-600 text-sm">
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-blue-violet mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  Modelado orientado a consumo en Datasphere
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-blue-violet mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  Integracion SAP y no SAP
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-blue-violet mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  Hands-on: indicadores y consumo de datos
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sesion 03 -->
+        <div class="session-item relative">
+          <div class="session-line relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-sap-purple text-white flex items-center justify-center font-bold text-lg z-10">
+              03
+            </div>
+            <div class="flex-1 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+              <div class="flex flex-wrap items-center gap-3 mb-3">
+                <span class="inline-flex items-center gap-1.5 bg-sap-purple/10 text-sap-purple text-sm font-semibold px-3 py-1 rounded-full">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  23 de junio (lun)
+                </span>
+                <span class="text-gray-400 text-sm">18h (hora de Brasilia)</span>
+              </div>
+              <h3 class="text-xl font-bold text-sap-dark mb-2">Knowledge Graph + AI Context</h3>
+              <ul class="space-y-1.5 text-gray-600 text-sm">
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-purple mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  SAP Knowledge Graph y grounding de agentes
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-purple mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  Como la IA consume contexto empresarial
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-purple mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  Introduccion al RPT-1 y modelos SAP
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sesion 04 -->
+        <div class="session-item relative">
+          <div class="session-line relative flex gap-4 sm:gap-6">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-sap-magenta text-white flex items-center justify-center font-bold text-lg z-10">
+              04
+            </div>
+            <div class="flex-1 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+              <div class="flex flex-wrap items-center gap-3 mb-3">
+                <span class="inline-flex items-center gap-1.5 bg-pink-100 text-sap-magenta text-sm font-semibold px-3 py-1 rounded-full">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  25 de junio (mie)
+                </span>
+                <span class="text-gray-400 text-sm">18h (hora de Brasilia)</span>
+              </div>
+              <h3 class="text-xl font-bold text-sap-dark mb-2">Insight, comunicacion y proyecto aplicado</h3>
+              <ul class="space-y-1.5 text-gray-600 text-sm">
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-magenta mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  Storytelling ejecutivo y datos para la decision
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-magenta mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  Proyecto Aplicado: Problema, Analisis, Insight, Impacto
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sap-magenta mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  Exposicion del escenario construido
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUIEN ES -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+        <span class="inline-block text-sap-purple font-semibold text-sm uppercase tracking-wider mb-3">Para quien es</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-sap-dark mb-6">
+          Este bootcamp fue hecho para ti si...
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100">
+          <div class="w-10 h-10 rounded-lg bg-sap-blue/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-sap-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed">Trabajas con SAP y quieres entender como datos, analytics e IA estan convergiendo en la plataforma</p>
+        </div>
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100">
+          <div class="w-10 h-10 rounded-lg bg-sap-blue/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-sap-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed">Escuchas hablar de BDC, Datasphere, Knowledge Graph y quieres pasar del buzzword a la practica</p>
+        </div>
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100">
+          <div class="w-10 h-10 rounded-lg bg-sap-blue/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-sap-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed">Eres consultor, ABAP o funcional y quieres ampliar tu vision sobre la capa de datos de SAP</p>
+        </div>
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100">
+          <div class="w-10 h-10 rounded-lg bg-sap-blue/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-sap-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed">Quieres prepararte para el mercado que esta pidiendo profesionales con vision de datos e IA</p>
+        </div>
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100">
+          <div class="w-10 h-10 rounded-lg bg-sap-blue/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-sap-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed">Estas entrando al mundo SAP y quieres comenzar ya con la tecnologia mas actual</p>
+        </div>
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100">
+          <div class="w-10 h-10 rounded-lg bg-sap-blue/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-sap-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed">Quieres aprender con quienes viven el mercado, no solo teoria de certificacion</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LO QUE VAS A APRENDER -->
+  <section class="py-16 sm:py-24 bg-gradient-to-b from-sap-dark to-sap-violet text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+        <span class="inline-block text-sap-lilac font-semibold text-sm uppercase tracking-wider mb-3">Resultado</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+          Al final del bootcamp, sabras...
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+          <div class="text-3xl font-black text-sap-lilac mb-3">01</div>
+          <p class="text-white/90 text-sm leading-relaxed">Como SAP esta reorganizando toda su estrategia de datos con el BDC</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+          <div class="text-3xl font-black text-sap-lilac mb-3">02</div>
+          <p class="text-white/90 text-sm leading-relaxed">Modelar datos con vision de consumo y gobernanza en Datasphere</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+          <div class="text-3xl font-black text-sap-lilac mb-3">03</div>
+          <p class="text-white/90 text-sm leading-relaxed">Como Knowledge Graph y RPT-1 alimentan agentes Joule con contexto real</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+          <div class="text-3xl font-black text-sap-lilac mb-3">04</div>
+          <p class="text-white/90 text-sm leading-relaxed">Transformar datos en insight y presentar con storytelling ejecutivo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSCRIPCION -->
+  <section class="py-16 sm:py-24 bg-gray-50" id="inscripcion">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="max-w-2xl mx-auto text-center">
+        <span class="inline-block text-sap-purple font-semibold text-sm uppercase tracking-wider mb-3">Inscripcion gratuita</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-sap-dark mb-4">
+          Asegura tu lugar ahora
+        </h2>
+        <p class="text-gray-600 text-lg mb-10">
+          Haz clic en el boton de abajo para inscribirte. Los cupos son limitados.
+        </p>
+
+        <a href="https://us06web.zoom.us/webinar/register/WN_lBnpZuo2Ruex97jN0M5-gg" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-sap-blue hover:bg-blue-600 text-white font-bold text-xl px-10 py-5 rounded-xl btn-glow">
+          Inscribirse gratuitamente
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
+        <p class="text-xs text-gray-400 mt-6">100% gratuito. En vivo por Zoom.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REALIZACION -->
+  <section class="py-12 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+        <p class="text-sm text-gray-400 font-medium uppercase tracking-wider">Realizacion</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-10 sm:h-12 w-auto">
+          <path fill="#0070F2" d="M24 6H0v12h12.13L24 6zm-13.986 8.683c-.37.123-.787.191-1.23.191-.456 0-.885-.072-1.263-.202l-.358.928-2 .006.09-.467c-.029.025-.057.051-.087.075-.535.435-1.208.636-2.037.651l-.213.002h-.052c-.921 0-1.784-.25-2.53-.683l.729-1.463c.79.472 1.286.578 1.956.564.347-.007.598-.071.761-.242a.565.565 0 0 0 .156-.372v-.001c.007-.38-.53-.559-1.185-.764-.531-.166-1.135-.393-1.606-.743-.559-.414-.825-.934-.812-1.668.005-.541.22-1.032.567-1.391.519-.543 1.357-.872 2.363-.872h.006c.863.001 1.915.248 2.676.64l-.82 1.445c-.835-.408-1.255-.447-1.73-.472-.708-.038-1.064.217-1.069.493-.007.336.669.64 1.305.847.964.309 2.19.723 2.377 1.92L7.77 8.399h2.046l2.064 5.636-.007-5.635h2.37c2.257 0 3.318.772 3.318 2.546 0 1.592-1.09 2.541-2.936 2.541h-.763l-.01 2.117-3.588-.004-.25-.917z"></path>
+          <path fill="#0070F2" d="M15.63 10.87c0-.717-.554-.95-1.248-.95h-.521v1.925h.521c.694-.001 1.247-.233 1.248-.975zm-6.856-.175-.748 2.387a2.22 2.22 0 0 0 1.499.007l-.736-2.395-.015.001z"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-sap-dark py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col items-center gap-6">
+        <div class="flex flex-col items-center gap-2">
+          <p class="text-white/40 text-xs uppercase tracking-wider">Contenido y metodologia por</p>
+          <img src="logos lab2lear várias cores.png" alt="Lab2learn" class="h-10 sm:h-12 w-auto opacity-90">
+        </div>
+
+        <div class="h-px w-full max-w-xs bg-white/10"></div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm text-white/50">
+          <a href="https://lab2learn.com.br/" target="_blank" rel="noopener" class="hover:text-white transition-colors">lab2learn.com.br</a>
+          <span class="hidden sm:inline">|</span>
+          <a href="https://www.linkedin.com/company/lab2learn-sap-btp/" target="_blank" rel="noopener" class="hover:text-white transition-colors">LinkedIn</a>
+          <span class="hidden sm:inline">|</span>
+          <a href="https://www.instagram.com/lab2learn.com.br" target="_blank" rel="noopener" class="hover:text-white transition-colors">Instagram</a>
+        </div>
+
+        <p class="text-xs text-white/30 text-center">
+          SAP, SAP BDC, SAP Datasphere, SAP Analytics Cloud, Joule y otros nombres de productos SAP son marcas registradas de SAP SE.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY CTA MOBILE -->
+  <div
+    x-data="stickyBtn()"
+    x-show="show"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="translate-y-full"
+    x-transition:enter-end="translate-y-0"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="translate-y-0"
+    x-transition:leave-end="translate-y-full"
+    class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200 p-4 z-40 sm:hidden"
+  >
+    <a href="https://us06web.zoom.us/webinar/register/WN_lBnpZuo2Ruex97jN0M5-gg" target="_blank" rel="noopener" class="block bg-sap-blue text-white font-bold text-center py-3.5 rounded-xl btn-glow">
+      Inscribirse gratuitamente
+    </a>
+  </div>
+
+  <script>
+    function countdown(targetDate) {
+      return {
+        days: '00',
+        hours: '00',
+        minutes: '00',
+        seconds: '00',
+        init() {
+          this.update();
+          setInterval(() => this.update(), 1000);
+        },
+        update() {
+          const now = new Date().getTime();
+          const target = new Date(targetDate).getTime();
+          const diff = target - now;
+          if (diff <= 0) {
+            this.days = '00';
+            this.hours = '00';
+            this.minutes = '00';
+            this.seconds = '00';
+            return;
+          }
+          this.days = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+          this.hours = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+          this.minutes = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+          this.seconds = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+        }
+      }
+    }
+
+    function stickyBtn() {
+      return {
+        show: false,
+        init() {
+          const observer = new IntersectionObserver(
+            ([entry]) => { this.show = !entry.isIntersecting; },
+            { threshold: 0 }
+          );
+          const hero = document.querySelector('#inscripcion');
+          if (hero) observer.observe(hero);
+          setTimeout(() => { this.show = true; }, 2000);
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
